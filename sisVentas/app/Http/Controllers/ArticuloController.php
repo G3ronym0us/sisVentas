@@ -8,5 +8,5 @@ use sisVentas\Http\Requests;
 
 class ArticuloController extends Controller
 {
-    //
+    //Holass5s
 }
