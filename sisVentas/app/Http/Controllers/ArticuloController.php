@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use sisVentas\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
-use sisVentas\Http\Requests\ArticuloFromRequests;
+use sisVentas\Http\Requests\ArticuloFormRequests;
 use sisVentas\Articulo;
 use DB;
 
@@ -53,7 +53,7 @@ class ArticuloController extends Controller
 
     	if(Input::hasFile('imagen')){
     		$file=Input::file('imagen');
-    		$file->move(public_patch().'/imagenes/articulos/',$file->getClientOriginalName());
+    		$file->move(public_path().'/imagenes/articulos/',$file->getClientOriginalName());
     		$articulo->imagen=$file->getClientOriginalName();
     	}
 
