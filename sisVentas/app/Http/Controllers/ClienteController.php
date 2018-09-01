@@ -37,7 +37,7 @@ class ClienteController extends Controller
     public function create()
     {
 
-    	return view("almacen.ventas.cliente");
+    	return view("ventas.cliente.create");
     }
 
     public function store(PersonaFormRequest $request)
