@@ -1,0 +1,53 @@
+[33mcommit 30b107f6aaff36f11ed3d94a370721343e26e5ae[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Sat Sep 1 11:57:55 2018 -0400
+
+    Modelo para ingresos creado
+
+[33mcommit ac05f4e691ba57a2524d63efc50f7258b293637a[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Sat Sep 1 11:46:15 2018 -0400
+
+    Se crearon todas las vistas para los proveedores
+
+[33mcommit d4113bcc07c07756553f2a3ccc79d546eff00ad3[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Sat Sep 1 01:18:14 2018 -0400
+
+    Se creo la vista para editar y crear clientes
+
+[33mcommit adae284a6c820b87dda503fb66f484a9cdec9083[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Tue Aug 28 22:47:50 2018 -0400
+
+    Se creo las vistas de index, eliminar y buscar clientes
+
+[33mcommit 73cd67b22d7826b86dc43380939a2733a7b819ed[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Tue Aug 28 22:30:21 2018 -0400
+
+    Se creo el Modelo, Request y Controlador de los Clientes
+
+[33mcommit d6e557f0fd2ad4db6cb7e4304c0efc65a94ee0f6[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Tue Aug 28 21:05:36 2018 -0400
+
+    Se creo la vista de Crear y Editar articulos
+
+[33mcommit 71c9983265f0dc8953fd6b299029a400e781f639[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Tue Aug 21 00:41:10 2018 -0400
+
+    Se ha creado el controlador, request, modelo y las vistas del modulo Articulo
+
+[33mcommit c39319a505a3e2c906382bffda1f9efc4bdaaf63[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Mon Aug 20 16:15:58 2018 -0400
+
+    Prueba de guardado
+
+[33mcommit a89da75ba11db7802e5b04162f7cb4c948123c17[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Sat Aug 18 12:57:01 2018 -0430
+
+    Primera subida
