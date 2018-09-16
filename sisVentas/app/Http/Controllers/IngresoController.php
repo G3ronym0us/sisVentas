@@ -28,7 +28,7 @@ class IngresoController extends Controller
 
     	if($request){
     		$query=trim($request->get('searchText'));
-    		$ingreso=DB::table('ingreso as i')
+    		$ingresos=DB::table('ingreso as i')
     		->join('persona as p','i.idproveedor','=','p.idpersona')
     		->join('detalle_ingreso as di','i.idingreso','=','di.iddetalle_ingreso')
     		->select('i.idingreso','i.fecha_hora','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado',DB::raw('sum(di.cantidad*precio_compra) as total'))
@@ -93,7 +93,7 @@ class IngresoController extends Controller
     		DB::rollback();
     	}
 
-    	return Redirect::to('compras/ingreso')
+    	return Redirect::to('compras/ingreso');
     }
 
     public function show($id)
@@ -119,7 +119,7 @@ class IngresoController extends Controller
     	$ingreso=Ingreso::findOrFail($id);
     	$ingreso->Estado='C';
     	$ingreso->update();
-    	return Redirect::to('compras/ingreso')
+    	return Redirect::to('compras/ingreso');
 
     }
 
