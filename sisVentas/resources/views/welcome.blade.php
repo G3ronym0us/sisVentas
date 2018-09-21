@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+@extends('layouts.admin')
+@section('contenido')<!DOCTYPE html>
 <html>
     <head>
         <title>Laravel</title>
@@ -43,3 +44,4 @@
         </div>
     </body>
 </html>
+@endsection
