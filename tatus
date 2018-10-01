@@ -1,0 +1,23 @@
+[33mcommit b337d34e95c8e50cb8fee8efbd0f590bb33c388c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Tue Sep 25 23:52:16 2018 -0400
+
+    Se creo el controlador y las vistas para las ventas
+
+[33mcommit b22cd3cfba64c560a2a445fb19b71bc3ee57b21a[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Fri Sep 21 00:46:03 2018 -0400
+
+    Se creo el modelo y request para las ventas
+
+[33mcommit c493cd270c2ace4fea21ca68dc5cf5029ea41f30[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Thu Sep 20 23:57:56 2018 -0400
+
+    Se creo la vista para crear ingresos de compras
+
+[33mcommit 5647d4b7ce9731e22e5b97c7209e012995b8d86d[m
+Author: Diohandres Jesus <diohandres1703@hotmail.com>
+Date:   Sun Sep 16 21:26:40 2018 -0400
+
+    se creo la vista para ingresar compras
