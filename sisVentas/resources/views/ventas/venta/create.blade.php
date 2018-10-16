@@ -155,10 +155,10 @@
 		datosArticulo=document.getElementById('pidarticulo').value.split('_');
 		idarticulo=datosArticulo[0];
 		articulo=$("#pidarticulo option:selected").text();
-		cantidad=$("#pcantidad").val();
+		cantidad=parseInt($("#pcantidad").val());
 		descuento=$("#pdescuento").val();
 		precio_venta=$("#pprecio_venta").val();
-		stock=$("#pstock").val();
+		stock=parseInt($("#pstock").val());
 
 		if (idarticulo!="" && cantidad!="" && cantidad>0 && descuento!="" && precio_venta!="")
 		{	

@@ -43,7 +43,7 @@ class UsuarioController extends Controller
     	$usuario=new User;
     	$usuario->name=$request->get('name');
     	$usuario->email=$request->get('email');
-    	$usuario->password=$request->get('password');
+    	$usuario->password=bcrypt($request->get('password'));
     	$usuario->save();
     	return Redirect::to('seguridad/usuario');
 

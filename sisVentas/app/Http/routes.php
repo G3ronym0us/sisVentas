@@ -27,3 +27,5 @@ Route::resource('seguridad/usuario','UsuarioController');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/{slug?}', 'HomeController@index');
+
