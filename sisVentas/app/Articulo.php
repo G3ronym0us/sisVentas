@@ -16,7 +16,6 @@ class Articulo extends Model
     	'idcategoria',
     	'codigo',
     	'nombre',
-    	'stock',
     	'descripcion',
     	'imagen',
     	'estado'

@@ -3,15 +3,21 @@
 
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-		<h3>Listado de Articulos  <a href="articulo/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Articulos  <a href="" data-target="#modal-create" data-toggle="modal"><button class="btn btn-success">Nuevo</button></a>
+		@include('almacen.articulo.create')
 		@include('almacen.articulo.search')
 
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+		<a href="{{url('pdf/articulos')}}">
+			<button class="btn btn-danger">Generar reporte PDF</button>
+		</a>
 	</div>
 	
 </div>
 
 <div class="row">
-	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>

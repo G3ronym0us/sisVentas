@@ -34,7 +34,7 @@
 				<label>Tipo Comprobante</label>
 				<select name="tipo_comprobante" class="form-control">
 					<option value="Boleta">Boleta</option>
-					<option value="Factura">Factura</option>
+					<option value="Factura" selected>Factura</option>
 					<option value="Ticket">Ticket</option>
 				</select>
 			</div>
@@ -48,7 +48,7 @@
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 			<div class="form-group">
 				<label for="num_comprobante">Numero de Comprobante</label>
-				<input type="text" name="num_comprobante" value="{{old('num_comprobante')}}" class="form-control" placeholder="Numero de Comprobante..." required>
+				<input type="text" name="num_comprobante" value="{{old('num_comprobante')}}" class="form-control" placeholder="Numero de Comprobante...">
 			</div>
 		</div>
 	</div>
@@ -105,7 +105,7 @@
 							<th></th>
 							<th></th>
 							<th></th>
-							<th><H4 id="total">S/. 0.00</H4></th>
+							<th><H4 id="total">Bs/. 0.00</H4></th>
 						</tfoot>
 						<tbody>
 						</tbody>
@@ -153,7 +153,7 @@
 			var fila='<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-warning" onclick="eliminar('+cont+');">X</button></td><td><input type="hidden" name="idarticulo[]" value="'+idarticulo+'">'+articulo+'</td><td><input type="number" name="cantidad[]" value="'+cantidad+'"></td><td><input type="number" name="precio_compra[]" value="'+precio_compra+'"></td><td><input type="number" name="precio_venta[]" value="'+precio_venta+'"></td><td>'+subtotal[cont]+'</td></tr>';
 			cont++;
 			limpiar();
-			$("#total").html("S/. "+total);
+			$("#total").html("Bs/. "+total);
 			evaluar();
 			$('#detalles').append(fila);
 
@@ -184,7 +184,7 @@
 	function eliminar(index)
 	{
 		total=total-subtotal[index];
-		$('#total').html("S/. "+total);
+		$('#total').html("Bs/. "+total);
 		$('#fila'+index).remove();
 		evaluar();
 	}

@@ -23,6 +23,10 @@ Route::resource('compras/ingreso','IngresoController');
 Route::resource('ventas/venta','VentaController');
 Route::resource('seguridad/usuario','UsuarioController');
 
+Route::resource('ventas/create','VentaController@create');
+Route::resource('compras/create','ingresoController@create');
+
+Route::resource('pdf/articulos','articuloController@pdf');
 
 Route::auth();
 

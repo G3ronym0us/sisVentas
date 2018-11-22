@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Input;
 use sisVentas\Http\Requests\ArticuloFormRequests;
 use sisVentas\Articulo;
 use DB;
+use sisVentas\Libraries\FPDF;
 
 class ArticuloController extends Controller
 {
@@ -20,7 +21,7 @@ class ArticuloController extends Controller
 
     public function index(Request $request)
     {
-
+        $categorias=DB::table('categoria')->where('condicion','=','1')->get();
     	if($request){
     		$query=trim($request->get('searchText'));
     		$articulos=DB::table('articulo as a')
@@ -28,9 +29,9 @@ class ArticuloController extends Controller
     		->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.imagen','a.estado')
     		->where('a.nombre','LIKE','%'.$query.'%')
     		->orwhere('a.codigo','LIKE','%'.$query.'%')
-    		->orderBy('idarticulo','desc')
+    		->orderBy('idarticulo','asc')
     		->paginate(7);
-    		return view('almacen.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
+    		return view('almacen.articulo.index',["articulos"=>$articulos,"categorias"=>$categorias,"searchText"=>$query]);
 
     	}
     }
@@ -47,7 +48,7 @@ class ArticuloController extends Controller
     	$articulo->idcategoria=$request->get('idcategoria');
     	$articulo->codigo=$request->get('codigo');
     	$articulo->nombre=$request->get('nombre');
-    	$articulo->stock=$request->get('stock');
+    	$articulo->stock=0;
     	$articulo->descripcion=$request->get('descripcion');
     	$articulo->estado='Activo';
 
@@ -103,4 +104,17 @@ class ArticuloController extends Controller
     	$articulo->update();
     	return Redirect::to('almacen/articulo');
     }
+
+    public function pdf()
+    {
+
+            $categorias=DB::table('categoria')->where('condicion','=','1')->get();
+            $articulos=DB::table('articulo as a')
+            ->join('categoria as c', 'a.idcategoria','=','c.idcategoria')
+            ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.imagen','a.estado')
+            ->orderBy('idarticulo','asc')
+            ->paginate(7);
+            return view('pdf.articulo',["articulos"=>$articulos,"categorias"=>$categorias]);
+        }
+    
 }

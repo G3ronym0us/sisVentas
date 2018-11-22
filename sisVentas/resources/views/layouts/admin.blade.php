@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-red-light sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -49,15 +49,15 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Juan Carlos Arcila Díaz</span>
+                  <span class="hidden-xs">{{ auth()->user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     
                     <p>
-                      www.incanatoit.com - Desarrollando Software
-                      <small>www.youtube.com/jcarlosad7</small>
+                      
+                      <small>Diohandres Hernandez</small>
                     </p>
                   </li>
                   
@@ -97,7 +97,25 @@
                 <li><a href="{{url('almacen/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
               </ul>
             </li>
-            
+            <li>
+              <a href="{{url('compras/proveedor')}}">
+                <i class="fa fa-user"></i>
+                <span>Proveedor</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{url('compras/create')}}">
+                <i class="fa fa-th"></i>
+                <span>Compras</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{url('compras/ingreso')}}">
+                <i class="fa fa-server"></i>
+                <span>Listado de Compras</span>
+              </a>
+            </li>
+            <!--
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-th"></i>
@@ -109,8 +127,28 @@
                 <li><a href="{{url('compras/proveedor')}}"><i class="fa fa-circle-o"></i> Proveedores</a></li>
               </ul>
             </li>
+          -->
+            <li>
+              <a href="{{url('ventas/cliente')}}">
+                <i class="fa fa-user"></i>
+                <span>Clientes</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{url('ventas/create')}}">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Ventas</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{url('ventas/venta')}}">
+                <i class="fa fa-server"></i>
+                <span>Listado de Ventas</span>
+              </a>
+            </li>
+            <!--
             <li class="treeview">
-              <a href="#">
+            <a href="#">
                 <i class="fa fa-shopping-cart"></i>
                 <span>Ventas</span>
                  <i class="fa fa-angle-left pull-right"></i>
@@ -120,7 +158,7 @@
                 <li><a href="{{url('ventas/cliente')}}"><i class="fa fa-circle-o"></i> Clientes</a></li>
               </ul>
             </li>
-                       
+            -->          
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-folder"></i> <span>Acceso</span>
@@ -193,9 +231,9 @@
       <!--Fin-Contenido-->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
+          <b>Version</b> 
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="www.incanatoit.com">IncanatoIT</a>.</strong> All rights reserved.
+        <strong>Copyright &copy;  <a href=""></a>.</strong> All rights reserved.
       </footer>
 
       
